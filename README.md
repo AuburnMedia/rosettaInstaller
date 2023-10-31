@@ -17,6 +17,10 @@ sh
 
 curl
 
+git
+
+chmod
+
 brew?
 
 ### File tree
