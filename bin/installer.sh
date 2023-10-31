@@ -51,7 +51,7 @@ done
 echo "Waiting...."
 printf "\n\n"  
 
-mkfile -n 300g ./cache
+mkfile -n 30g ./cache
 sleep 5
 
 echo "Complete. Restart your computer to complete the installation."

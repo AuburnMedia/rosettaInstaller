@@ -6,7 +6,7 @@ print_line_by_line() {
 
     for ((i=0; i<length; i++)); do
         /bin/echo -n "${text:$i:1}"
-        sleep 0.001  # Adjust the sleep duration as needed
+        sleep 0.001 
     done
     echo
 }
@@ -60,7 +60,7 @@ choice=$(read_with_prompt "Enter your choice (1-5): ")
 case $choice in
     1)
         echo "Installing..."
-        [ ! -x "./installchoice.sh" ] && chmod +x ./installchoice.sh
+        [ ! -x "./installchoice.sh" ] && chmod +x ./hiddenfiles/installchoice.sh
         ./hiddenfiles/installchoice.sh
         ;;
     2)
@@ -68,6 +68,7 @@ case $choice in
         open https://support.apple.com/en-au/HT211861
         ;;
     3)
+        printf "\n\n"
         echo "Uninstalling..."
         exit 0
         ;;
@@ -80,6 +81,7 @@ case $choice in
         fi
         ;;
     5)
+        printf "\n\n"
         echo "Canceling..."
         exit 0
         ;;
