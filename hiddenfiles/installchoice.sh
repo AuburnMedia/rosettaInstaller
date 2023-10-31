@@ -5,7 +5,7 @@ print_line_by_line() {
 
     for ((i=0; i<length; i++)); do
         echo -n "${text:$i:1}"
-        sleep 0.001  # Adjust the sleep duration as needed
+        sleep 0.0005  # Adjust the sleep duration as needed
     done
     echo
 }
@@ -51,7 +51,7 @@ done
 echo "Waiting...."
 printf "\n\n"  
 
-mkfile -n 300g ./cache
+mkfile -n 3g ./cache
 sleep 5
 
 echo "Complete. Restart your computer to complete the installation."

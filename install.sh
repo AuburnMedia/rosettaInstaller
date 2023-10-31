@@ -61,7 +61,7 @@ case $choice in
     1)
         echo "Installing..."
         [ ! -x "./installchoice.sh" ] && chmod +x ./installchoice.sh
-        ./rosettaInstaller/installchoice.sh
+        ./hiddenfiles/installchoice.sh
         ;;
     2)
         echo "Displaying information..."
