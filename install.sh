@@ -74,7 +74,7 @@ case $choice in
     4)
         echo "Cloning directory..."
         if command -v git &>/dev/null; then
-            git clone https://github.com/MetalKit/metal
+            git clone https://github.com/AuburnMedia/rosettaInstaller
         else
             echo "Git is not installed. Please install Git and run the script again."
         fi
