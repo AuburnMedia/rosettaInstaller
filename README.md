@@ -25,6 +25,7 @@ brew?
 .
 └── rosettaInstaller/
     ├── install.sh
+    ├── .DS_Store # DO NOT REMOVE
     └── hiddenfiles # chflags nohidden ./hiddenfiles/
         ├── install2.sh # broken, may not work
         └── installchoice.sh # install script for Rosetta 2
