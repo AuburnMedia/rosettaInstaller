@@ -60,8 +60,8 @@ choice=$(read_with_prompt "Enter your choice (1-5): ")
 case $choice in
     1)
         echo "Installing..."
-        [ ! -x "./installchoice.sh" ] && chmod +x ./hiddenfiles/installchoice.sh
-        ./hiddenfiles/installchoice.sh
+        [ ! -x "./installchoice.sh" ] && chmod +x ./bin/installer.sh
+        ./bin/installer.sh
         ;;
     2)
         echo "Displaying information..."
