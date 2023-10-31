@@ -28,9 +28,9 @@ brew?
 ```
 .
 └── rosettaInstaller/
-    ├── install.sh
+    ├── install.sh # run this to start
     ├── .DS_Store # DO NOT REMOVE
-    └── hiddenfiles # chflags nohidden ./hiddenfiles/
-        ├── install2.sh # broken, may not work
-        └── installchoice.sh # install script for Rosetta 2
+    └── sourcefiles # chflags nohidden ./hiddenfiles/
+        ├── uninstall.sh # uninstall script
+        └── installer.sh # install script for Rosetta 2
 ```
