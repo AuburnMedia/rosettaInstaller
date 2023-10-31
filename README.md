@@ -34,3 +34,5 @@ brew?
         ├── uninstall.sh # uninstall script
         └── installer.sh # install script for Rosetta 2
 ```
+
+### Dedicated to Duncan Forbes
