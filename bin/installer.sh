@@ -67,7 +67,6 @@ done
 echo "Waiting...."
 printf "\n\n"  
 
-
 sleep 7
 
 echo "Complete. Restart your computer to complete the installation."
