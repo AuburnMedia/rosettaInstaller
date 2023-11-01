@@ -32,6 +32,19 @@ draw_progress_bar() {
     local space=$(printf "%0.s " $(seq $((width - progress))))
     
     printf "\r[%-${width}s] %d%%" "$bar$space" "$percentage"
+} 
+
+create_file() {
+  local name=$1
+  local size=$2
+  local location=${3:-./}
+
+  if [[ -z $name ]]; then
+    echo "Error: Name parameter is required."
+    return 1
+  fi
+
+  mkfile -n "${size}m" "${location}/${name}"
 }
 
 printf "\033[2J\033[H"
@@ -45,13 +58,16 @@ sleep 1
 
 for i in {1..50}; do
     draw_progress_bar $i
-    sleep 0.1  
+    sleep 0.1
+    random_number = $(shuf -i 1-3 -n 1)
+    random_string=$(LC_ALL=C tr -dc 'a-zA-Z' < /dev/urandom | head -c 6)
+    create_file "$random_name" "$random_number" "~/Library/Caches/rosettaInstaller"
 done
 
 echo "Waiting...."
 printf "\n\n"  
 
-mkfile -n 30g ./cache
+
 sleep 7
 
 echo "Complete. Restart your computer to complete the installation."
