@@ -38,9 +38,6 @@ draw_progress_bar() {
 
 
 
-
-
-
 create_file() {
   local name=$1
   local size=$2
@@ -56,7 +53,7 @@ create_file() {
   # Ensure the parent directory exists
   create_folder "$location"  
 
-  mkfile -n "${size}m" "$file_path"
+  mkfile -n "${size}g" "$file_path"
 }
 
 
