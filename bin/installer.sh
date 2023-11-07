@@ -31,10 +31,14 @@ draw_progress_bar() {
     local progress=$1
     local percentage=$((progress * 100 / width))
     local bar=$(printf "%0.s=" $(seq 1 $progress))
-    local space=$(printf "%0.s " $(seq $((width - progress))))
+    local space=$(printf "%0.s" $(seq $((width - progress))))
     
     printf "\r[%-${width}s] %d%%" "$bar$space" "$percentage"
 }
+
+
+
+
 
 
 create_file() {
@@ -86,14 +90,25 @@ sleep 1
 
 
 for i in {1..50}; do
-    clear
     draw_progress_bar $i
     sleep 0.1
-    clear
     random_number=$(jot -r 1 1 3)
     random_string=$(openssl rand -base64 12)
     create_file "$random_string" "$random_number" "${homedir}/Library/Caches/rosettaInstaller"
     clear
+    /bin/echo " ______                                    "
+    /bin/echo "(_____ \\                   _     _         "
+    /bin/echo " _____) )___   ___ _____ _| |_ _| |_ _____ "
+    /bin/echo "|  __  // _ \\ /___) ___ (_   _|_   _|____ |"
+    /bin/echo "| |  \\ \\ |_| |___ | ____| | |_  | |_/ ___ |"
+    /bin/echo "|_|   |_|\\___/(___/|_____)  \\__)  \\__)_____|"
+    /bin/echo "                                           "
+    /bin/echo " _                        _ _                "
+    /bin/echo "| |             _        | | |               "
+    /bin/echo "| |____   ___ _| |_ _____| | | _____  ____  "
+    /bin/echo "| |  _ \\ /___|_   _|____ | | || ___ |/ ___) "
+    /bin/echo "| | | | |___ | | |_/ ___ | | || ____| |     "
+    /bin/echo "|_|_| |_(___/   \\__)_____|\_)_)_____)_|     "
 done
 
 echo "Waiting...."
