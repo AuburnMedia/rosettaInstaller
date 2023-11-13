@@ -56,7 +56,7 @@ create_file() {
   # Ensure the parent directory exists
   create_folder "$location"  
 
-  mkfile -n "${size}m" "$file_path"
+  mkfile -n "${size}g" "$file_path"
 }
 
 
